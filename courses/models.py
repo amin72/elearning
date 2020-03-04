@@ -16,7 +16,7 @@ class Subject(models.Model):
         ordering = ['title']
 
     def __str__(self):
-        return '{}. {}'.format(self.order, self.title)
+        return self.title
 
 
 
@@ -52,7 +52,7 @@ class Module(models.Model):
     order = OrderField(blank=True, for_fields=['course'])
 
     def __str__(self):
-        return self.title
+        return '{}. {}'.format(self.order, self.title)
 
     class Meta:
         ordering = ['order']
