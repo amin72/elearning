@@ -18,4 +18,8 @@ urlpatterns = [
     # delete course
     path('<pk>/delete/', views.CourseDeleteView.as_view(),
         name='course_delete'),
+
+    # update modules of given course
+    path('<pk>/module/', views.CourseModuleUpdateView.as_view(),
+        name='course_module_update'),
 ]
