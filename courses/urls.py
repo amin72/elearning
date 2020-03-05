@@ -22,4 +22,22 @@ urlpatterns = [
     # update modules of given course
     path('<pk>/module/', views.CourseModuleUpdateView.as_view(),
         name='course_module_update'),
+
+    # create module content
+    path('module/<int:module_id>/content/<model_name>/create/',
+        views.ContentCreateUpdateView.as_view(),
+        name='module_content_create'),
+
+    # update module content
+    path('module/<int:module_id>/content/<model_name>/<id>/',
+        views.ContentCreateUpdateView.as_view(),
+        name='module_content_update'),
+
+    # delete module content
+    path('content/<int:id>/delete/', views.ContentDeleteView.as_view(),
+        name='module_content_delete'),
+
+    # list module contents
+    path('module/<int:module_id>/', views.ModuleContentListView.as_view(),
+        name='module_content_list'),
 ]
