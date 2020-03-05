@@ -15,6 +15,8 @@ urlpatterns = [
 
     path('course/', include('courses.urls')),
 
+    path('students/', include('students.urls')),
+
     # list courses
     path('', CourseListView.as_view(), name='course_list'),
 ]
