@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.urls import path, include
 from django.contrib.auth import views as auth_views
+from courses.views import CourseListView
 
 
 urlpatterns = [
@@ -13,4 +14,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('course/', include('courses.urls')),
+
+    # list courses
+    path('', CourseListView.as_view(), name='course_list'),
 ]
