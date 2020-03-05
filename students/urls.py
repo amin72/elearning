@@ -4,7 +4,7 @@ from . import views
 
 app_name = 'students'
 
-urlpatters = [
+urlpatterns = [
     path('register/', views.StudentRegistrationView.as_view(),
         name='student_registration'),
 ]
