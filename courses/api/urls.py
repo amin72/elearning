@@ -11,4 +11,7 @@ urlpatterns = [
     # subject detail
     path('subjects/<pk>/', views.SubjectDetailAPIView.as_view(),
         name='subject_detail'),
+
+    path('courses/<pk>/enroll/', views.CourseEnrollAPIView.as_view(),
+        name='course_enroll'),
 ]
