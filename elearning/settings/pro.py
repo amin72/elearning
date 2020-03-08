@@ -8,7 +8,7 @@ ADMINS = (
 )
 
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['elearningproject.com', 'www.elearningproject.com']
 
 
 DATABASES = {
