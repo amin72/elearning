@@ -19,3 +19,6 @@ DATABASES = {
         'PASSWORD': 'testpassword',
     }
 }
+
+SECURE_SSL_REDIRECT = True
+CSRF_COOKIE_SECURE = True
